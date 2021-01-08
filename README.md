@@ -1,6 +1,6 @@
 # Booty
 
-If you want to know what Booty is, please ask Torsten.
+If you want to know what Booty is, look behind you.
 
 ## Table of Content
 
