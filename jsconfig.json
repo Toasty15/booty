@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@booty/components/*": [
+        "src/components/*"
+      ],
+      "@booty/lib/*": [
+        "src/lib/*"
+      ],
+      "@booty/pages/*": [
+        "src/pages/*"
+      ],
+      "@booty/styles/*": [
+        "src/styles/*"
+      ],
+      "@booty/fonts/*": [
+        "public/static/fonts/*"
+      ],
+      "@booty/images/*": [
+        "public/static/images/*"
+      ]
+    }
+  }
+}

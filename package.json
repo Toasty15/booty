@@ -1,0 +1,22 @@
+{
+  "name": "booty",
+  "version": "1.0.0",
+  "description": "Booty is ...",
+  "repository": "https://github.com/Toasty15/booty",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "Glinnex",
+  "license": "CC-BY-NC-ND-4.0",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "next": "^10.0.5",
+    "process": "^0.11.10",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "sass": "^1.32.2"
+  }
+}

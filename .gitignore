@@ -1,0 +1,33 @@
+# project
+*
+!*/
+
+# general
+!/CHANGELOG.md
+!/CONTRIBUTING.md
+!/LICENSE
+!/README.md
+!/banner.png
+
+# git
+!/.gitattributes
+!/.gitignore
+
+# ci/cd
+!/.gitlab-ci.yml
+
+# editor config
+!/.editorconfig
+
+# node
+!/package.json
+!/package-lock.json
+!/jsconfig.json
+
+# docker & docker compose
+!/docker-compose*.yml
+!/Dockerfile*
+
+# sources, resources, documentation & tests
+!/src/**/*
+!/public/**/*
