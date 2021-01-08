@@ -1,11 +1,6 @@
-# Zion
+# Booty
 
-![banner](banner.png)
-***
-At a time of darkness and uncertainty, at a time of unrest and strife, when the hearts of people are troubled, and they cannot find peace for their souls, in
-such a time it is important, that the gospel of Jesus Christ reached the hearts of men, it is important, that the peace of God returns to their hearts. As long
-as the grace of our heavenly father exists, everyone who seeks them should find them. The goal of this project is to create a website that shares the gospel of
-Jesus Christ with people.
+If you want to know what Booty is, please ask Torsten.
 
 ## Table of Content
 
