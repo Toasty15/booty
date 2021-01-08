@@ -43,7 +43,7 @@ const Game = () => {
   return (
     <div className={styles.game}>
       <label>Gib mir die richtige Zahl</label>
-      <input type={'text'} onChange={event => setAnswer(event.target.value)}/>
+      <input type={'text'} onChange={event => setAnswer(event.target.value)} onSubmit={checkAnswer}/>
       <input type={'button'} value={"Let's Go"} onClick={checkAnswer}/>
     </div>
   )
