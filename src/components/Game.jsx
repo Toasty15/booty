@@ -31,7 +31,7 @@ const Game = () => {
 
   const set = (id, event) => {
     setQuestions(questions.map(question => {
-      if(question.id === id) {
+      if (question.id === id) {
         question.guess = event.target.value
       }
       return question
@@ -57,17 +57,15 @@ const Game = () => {
   }
 
   if (failed) {
-    {
-      return (
-        <div className={styles.game}>
-          <p>Schade, leider falsch.</p>
-          <input className={styles.hidden} type={'hidden'} value={''} onChange={reset}/>
-          <input className={styles.hidden} type={'hidden'} value={''} onChange={reset}/>
-          <input className={styles.hidden} type={'hidden'} value={''} onChange={reset}/>
-          <input type={'button'} value={"Noch mal?"} onClick={again}/>
-        </div>
-      )
-    }
+    return (
+      <div className={styles.game}>
+        <p>Schade, leider falsch.</p>
+        <input className={styles.hidden} type={'hidden'} value={''} onChange={reset}/>
+        <input className={styles.hidden} type={'hidden'} value={''} onChange={reset}/>
+        <input className={styles.hidden} type={'hidden'} value={''} onChange={reset}/>
+        <input type={'button'} value={"Noch mal?"} onClick={again}/>
+      </div>
+    )
   }
 
   return (
