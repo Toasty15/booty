@@ -4,20 +4,48 @@ import styles from '@booty/styles/Game.module.scss'
 const Game = () => {
 
   const [failed, setFailed] = useState(false)
-  const [answer, setAnswer] = useState('')
   const [won, setWon] = useState(false)
+  const [questions, setQuestions] = useState([
+    {id: 0, answer: '123', guess: ''},
+    {id: 1, answer: '456', guess: ''},
+    {id: 2, answer: '789', guess: ''},
+  ])
 
-  const checkAnswer = () => {
-    if (answer === '123') {
-      setWon(true)
+  const check = () => {
+    let isCorrect = questions.reduce((sum, next) => sum && (next.guess === next.answer), true)
+    if (isCorrect) {
+      setWon(isCorrect)
     } else {
-      setFailed(true)
+      setFailed(!isCorrect)
     }
   }
 
-  const doAgain = () => {
+  const resetQuestion = (question) => {
+    question.guess = ''
+    return question
+  }
+
+  const reset = () => {
+    setQuestions(questions.map(resetQuestion))
+  }
+
+  const set = (id, event) => {
+    setQuestions(questions.map(question => {
+      if(question.id === id) {
+        question.guess = event.target.value
+      }
+      return question
+    }))
+  }
+
+  const again = () => {
     setFailed(false)
-    setAnswer('')
+  }
+
+  const keyPressed = (event) => {
+    if (event.key === 'Enter') {
+      check()
+    }
   }
 
   if (won) {
@@ -33,8 +61,10 @@ const Game = () => {
       return (
         <div className={styles.game}>
           <p>Schade, leider falsch.</p>
-          <input className={styles.hidden} type={'hidden'} value={''} onChange={event => setAnswer(event.target.value)}/>
-          <input type={'button'} value={"Noch mal?"} onClick={doAgain}/>
+          <input className={styles.hidden} type={'hidden'} value={''} onChange={reset}/>
+          <input className={styles.hidden} type={'hidden'} value={''} onChange={reset}/>
+          <input className={styles.hidden} type={'hidden'} value={''} onChange={reset}/>
+          <input type={'button'} value={"Noch mal?"} onClick={again}/>
         </div>
       )
     }
@@ -42,9 +72,11 @@ const Game = () => {
 
   return (
     <div className={styles.game}>
-      <label>Gib mir die richtige Zahl</label>
-      <input type={'text'} onChange={event => setAnswer(event.target.value)} onSubmit={checkAnswer}/>
-      <input type={'button'} value={"Let's Go"} onClick={checkAnswer}/>
+      <label>Gib mir die richtigen Zahlen</label>
+      <input type={'text'} onChange={event => set(0, event)} onKeyPress={keyPressed}/>
+      <input type={'text'} onChange={event => set(1, event)} onKeyPress={keyPressed}/>
+      <input type={'text'} onChange={event => set(2, event)} onKeyPress={keyPressed}/>
+      <input type={'button'} value={"Let's Go"} onClick={check}/>
     </div>
   )
 }
