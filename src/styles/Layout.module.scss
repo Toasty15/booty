@@ -4,8 +4,32 @@
   justify-content: center;
   flex-direction: column;
   height: 100vh;
+
+  h1 {
+    margin-bottom: 80px;
+    font-family: 'aphrosine', serif;
+    font-style: bold;
+    font-size: 50px;
+    color: #404040;
+  }
+
+  label {
+    color: #404040;
+    font-family: 'ArnoPro', serif;
+    font-style: italic;
+    margin: 10px 10px;
+  }
 }
 
 .title {
   vertical-align: top;
+}
+
+
+.layer {
+  background-color: rgba(255, 239, 224, 0.4);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
 }

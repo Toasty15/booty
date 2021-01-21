@@ -4,7 +4,7 @@ import Layout from '@booty/components/Layout';
 
 const HomePage = () => {
   return (
-    <Layout title={'Booty'}>
+    <Layout title={'Der ungreifbare Schatz'}>
       <Game/>
     </Layout>
   )

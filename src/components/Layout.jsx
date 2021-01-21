@@ -4,7 +4,7 @@ import styles from '@booty/styles/Layout.module.scss'
 
 const Layout = ({
   children,
-  title = 'Booty',
+  title = 'Der ungreifbare Schatz',
 }) => {
   return (
     <div>
@@ -17,6 +17,8 @@ const Layout = ({
       </Head>
 
 
+      <div className={styles.layer} />
+      
       <div className={styles.content}>
         <h1 className={styles.title}>{title}</h1>
         {children}

@@ -1,4 +1,38 @@
+@import url("https://use.typekit.net/hgd0lum.css");
+
 body {
   width: 100%;
-  background-color: darkgrey;
+  background-image: url('/static/images/old_paper_1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
+
+p {
+  font-family: 'ArnoPro';
+  font-size: 18px;
+  text-align: center;
+}
+
+input {
+  font-family: 'ArnoPro';
+}
+
+label {
+  font-size: 18px;
+}
+
+@font-face {
+  font-family: 'ArnoPro';
+  src: url('/static/fonts/ArnoPro-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ArnoPro';
+  src: url('/static/fonts/ArnoPro-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
