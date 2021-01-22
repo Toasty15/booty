@@ -6,7 +6,7 @@ const Game = () => {
   const [failed, setFailed] = useState(false)
   const [won, setWon] = useState(false)
   const [questions, setQuestions] = useState([
-    {id: 0, answer: '3', guess: ''},
+    {id: 0, answer: '6', guess: ''},
     {id: 1, answer: '19', guess: ''},
     {id: 2, answer: '8', guess: ''},
   ])
