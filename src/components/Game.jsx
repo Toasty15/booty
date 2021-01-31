@@ -6,7 +6,7 @@ const Game = () => {
   const [failed, setFailed] = useState(false)
   const [won, setWon] = useState(false)
   const [questions, setQuestions] = useState([
-    {id: 0, answer: '6', guess: ''},
+    {id: 0, answer: '16', guess: ''},
     {id: 1, answer: '19', guess: ''},
     {id: 2, answer: '8', guess: ''},
   ])
@@ -51,7 +51,7 @@ const Game = () => {
   if (won) {
     return (
       <div className={styles.game}>
-        <p>Der Schlüssel liegt unter dem roten Kreuz vergraben. Ohne Witz!</p>
+        <p>Du gehörst wohl zu den Besonderen. Der Schlüssel liegt unter dem roten Kreuz. Ohne Witz!</p>
       </div>
     )
   }
@@ -59,7 +59,7 @@ const Game = () => {
   if (failed) {
     return (
       <div className={styles.game}>
-        <p>Schade, leider falsch.</p>
+        <p>Leider falsch!</p>
         <input className={styles.hidden} type={'hidden'} value={''} onChange={reset}/>
         <input className={styles.hidden} type={'hidden'} value={''} onChange={reset}/>
         <input className={styles.hidden} type={'hidden'} value={''} onChange={reset}/>
@@ -70,7 +70,7 @@ const Game = () => {
 
   return (
     <div className={styles.game}>
-      <label>Gib mir die richtigen Zahlen</label>
+      <label>Du hast alle Rätsel gelöst? Gib mir die richtigen Zahlen!</label>
       <div>
         <input type={'text'} onChange={event => set(0, event)} onKeyPress={keyPressed}/>
         <input type={'text'} onChange={event => set(1, event)} onKeyPress={keyPressed}/>
