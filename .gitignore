@@ -14,7 +14,7 @@
 !/.gitignore
 
 # ci/cd
-!/.gitlab-ci.yml
+!/.github/**/*
 
 # editor config
 !/.editorconfig
@@ -23,6 +23,7 @@
 !/package.json
 !/package-lock.json
 !/jsconfig.json
+!/next.config.js
 
 # docker & docker compose
 !/docker-compose*.yml
